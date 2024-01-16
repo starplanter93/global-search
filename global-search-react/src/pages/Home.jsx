@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { fetchCountries } from '../api';
+import CountryList from '../components/CountryList';
 
 export default function Home() {
   const [countries, setCountries] = useState([]);
@@ -13,5 +14,9 @@ export default function Home() {
     setInitData();
   }, []);
 
-  return <div>Home</div>;
+  return (
+    <div>
+      <CountryList countries={countries} />
+    </div>
+  );
 }
