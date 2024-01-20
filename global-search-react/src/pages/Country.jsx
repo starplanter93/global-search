@@ -16,6 +16,10 @@ export default function Country() {
     setInitData();
   }, [params.code, setInitData]);
 
+  if (!country) {
+    return <div>Loading ...</div>;
+  }
+
   return (
     <div className={style.container}>
       <div className={style.header}>

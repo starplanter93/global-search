@@ -29,7 +29,7 @@ export default function Searchbar({ q }) {
   return (
     <div className={style.container}>
       <input
-        value={search}
+        value={search || ''}
         onKeyDown={onKeyDown}
         onChange={onChangeSearch}
         placeholder='검색어를 입력하세요...'

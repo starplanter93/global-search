@@ -7,7 +7,6 @@ import NotFound from './pages/NotFound';
 import Layout from './components/Layout';
 
 function App() {
-  console.log('test');
   return (
     <Layout>
       <Routes>
