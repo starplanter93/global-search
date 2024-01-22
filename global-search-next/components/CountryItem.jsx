@@ -1,5 +1,5 @@
-import { useNavigate } from 'react-router-dom';
 import style from './CountryItem.module.css';
+import { useRouter } from 'next/router';
 
 export default function CountryItem({
   code,
@@ -8,11 +8,11 @@ export default function CountryItem({
   flagImg,
   population,
   region,
-  capital,
+  capital
 }) {
-  const nav = useNavigate();
+  const router = useRouter();
   const onClickItem = () => {
-    nav(`/country/${code}`);
+    router.push(`/country/${code}`);
   };
   return (
     <div onClick={onClickItem} className={style.container}>
