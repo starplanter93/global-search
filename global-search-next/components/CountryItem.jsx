@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import style from './CountryItem.module.css';
 import { useRouter } from 'next/router';
 
@@ -16,7 +17,13 @@ export default function CountryItem({
   };
   return (
     <div onClick={onClickItem} className={style.container}>
-      <img className={style.flag_img} src={flagImg} />
+      <Image
+        className={style.flag_img}
+        src={flagImg}
+        alt='flag'
+        width={100}
+        height={100}
+      />
       <div className={style.content}>
         <div className={style.name}>
           {flagEmoji} {commonName}
