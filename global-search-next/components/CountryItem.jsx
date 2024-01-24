@@ -17,13 +17,9 @@ export default function CountryItem({
   };
   return (
     <div onClick={onClickItem} className={style.container}>
-      <Image
-        className={style.flag_img}
-        src={flagImg}
-        alt='flag'
-        width={100}
-        height={100}
-      />
+      <div className={style.flag_img}>
+        <Image src={flagImg} alt='flag' fill />
+      </div>
       <div className={style.content}>
         <div className={style.name}>
           {flagEmoji} {commonName}
